@@ -1,3 +1,9 @@
+*{
+    margin: 0;
+    color: #474444;
+}
+
+
 .mainContainer{
     height: 100vh;
     display: flex;
