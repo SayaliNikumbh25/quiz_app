@@ -13,11 +13,8 @@ const registerUser = async (req, res) => {
       return res.status(400).json({ message: 'User already exists' });
     }
     const hashedPassword = await bcrypt.hash(password, 12);
-    console.log(hashedPassword, password)
-    const isMatch = await bcrypt.compare(password,hashedPassword);
-    console.log(isMatch)
-    const newUser = new User({ username, email, password: hashedPassword });
-    console.log(newUser)
+    const lowerEmail = email.toLowerCase()
+    const newUser = new User({ username, email:lowerEmail, password: hashedPassword });
     const resp= await newUser.save();
     console.log(resp)
     const token = jwt.sign({ id: newUser._id }, process.env.SECRET);
