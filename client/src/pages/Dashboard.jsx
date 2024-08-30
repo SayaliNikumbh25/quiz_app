@@ -61,7 +61,7 @@ const Dashboard = () => {
 
   const handleShare = (id) => {
     console.log(id)
-    shareLink = `http://localhost:5173/quiz/${id}`;
+    shareLink = `https://quiz-app-swart-rho.vercel.app/quiz/${id}`;
     navigator.clipboard
       .writeText(shareLink)
       .then(() => {
