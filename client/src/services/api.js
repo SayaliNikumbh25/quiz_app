@@ -11,7 +11,7 @@ import axios from 'axios';
 //   }
 //   return config;
 // });
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://quiz-app-server-gw81.onrender.com/api';
 
 export const register = async (userData) => {
   return await axios.post(`${API_URL}/users/register`, userData);

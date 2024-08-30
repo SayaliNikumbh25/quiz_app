@@ -7,7 +7,7 @@ import QuizTake from './components/QuizTake';
 import LandingPage from './pages/LandingPage';
 import PrivateRoute from './components/PrivateRoute';
 import PageNotFound from './pages/PageNotFound';
-import './app.css' 
+
 
 
 function App() {
